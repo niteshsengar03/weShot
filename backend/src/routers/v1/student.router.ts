@@ -5,5 +5,6 @@ import { studentSchema } from '../../validator/student.validator';
 const studentRouter = express.Router();
 
 studentRouter.post('/create-student',validateBody(studentSchema),createStudentController);
+studentRouter.post('/n8n',importStudent);
 
 export default studentRouter;
