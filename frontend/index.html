@@ -1,55 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>We Shot – Sign Up</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Particle Background -->
-  <div id="particles-js"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>We Shot – Sign Up</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
 
-  <!-- Centered Form -->
-  <div class="form-wrapper">
-    <h1 class="title">We <span>Shot</span></h1>
-    <p class="subtitle">Enter your details and join us!</p>
+    <!-- Centered Form -->
+    <div class="form-wrapper">
+      <h1 class="title">We <span>Shot</span></h1>
+      <p class="subtitle">Enter your details and join us!</p>
 
-    <!-- Collapsible Note -->
-    <div class="note-section">
-      <button id="toggleNote" class="note-toggle">ℹ️ About Our Goal</button>
-      <div id="noteContent" class="note-content">
-        <p>
-          Our mission is to keep you updated on <strong>VIT Chennai placements</strong>.  
-          If you get shortlisted in a company, we will email you the details.
-        </p>
-        <p>
-          Please provide an email address that you <strong>check regularly</strong> and that 
-          <strong>does not receive too many emails daily</strong> so you never miss our alerts.
-        </p>
+      <!-- Collapsible Note -->
+      <div class="note-section">
+        <button id="toggleNote" class="note-toggle">ℹ️ About Our Goal</button>
+        <div id="noteContent" class="note-content">
+          <p>
+            Our mission is to keep you updated on
+            <strong>VIT Chennai placements</strong>. If you get shortlisted in a
+            company, we will email you the details.
+          </p>
+          <p>
+            Please provide an email address that you
+            <strong>check regularly</strong> and that
+            <strong>does not receive too many emails daily</strong> so you never
+            miss our alerts.
+          </p>
+        </div>
       </div>
+
+      <form id="weShotForm">
+        <div class="input-group">
+          <input type="text" id="name" required />
+          <label for="name">Full Name</label>
+        </div>
+        <div class="input-group">
+          <input type="text" id="regNo" required />
+          <label for="regNo">Registration No.</label>
+        </div>
+        <div class="input-group">
+          <input type="email" id="email" required />
+          <label for="email">Email</label>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+      <div class="msg" id="message"></div>
     </div>
 
-    <form id="weShotForm">
-      <div class="input-group">
-        <input type="text" id="name" required>
-        <label for="name">Full Name</label>
-      </div>
-      <div class="input-group">
-        <input type="text" id="collegeId" required>
-        <label for="collegeId">College ID</label>
-      </div>
-      <div class="input-group">
-        <input type="email" id="email" required>
-        <label for="email">Email</label>
-      </div>
-      <button type="submit">Submit</button>
-    </form>
-    <div class="msg" id="message"></div>
-  </div>
-
-  <!-- Libraries -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script src="script.js"></script>
-</body>
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
