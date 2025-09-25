@@ -8,3 +8,4 @@ export async function createStudentController(req:Request,res:Response){
         message: student
     })
 }
+
