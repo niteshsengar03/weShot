@@ -21,7 +21,7 @@ export async function scrapedStudents(
       if (existingStudent) {
         result.push({
           reg: existingStudent.regNo,
-          name: student.name,
+          name: existingStudent.name,
           email: existingStudent.email,
           subject: student.subject
         });
@@ -32,7 +32,7 @@ export async function scrapedStudents(
       if (existingByEmail) {
         result.push({
           reg: existingByEmail.regNo,
-          name: student.name,
+          name: existingByEmail.name,
           email: existingByEmail.email, 
           subject: student.subject
         });

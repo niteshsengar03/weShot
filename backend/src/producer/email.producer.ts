@@ -1,4 +1,4 @@
-import { notificationDto } from "../dto/notification.dto";
+import { notificationDto } from "../DTO/notification.dto";
 import { mailerQueue } from "../queue/mailer.queue";
 
 export const MAILER_PAYLOAD = "payload:mail";
