@@ -3,3 +3,10 @@ export type studentDTO = {
     name:string,
     email:string,
 }
+
+export type dataStudentDTO = {
+    reg?: string; 
+    name: string; 
+    email?: string; 
+    subject: string
+}

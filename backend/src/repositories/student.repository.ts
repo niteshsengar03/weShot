@@ -16,3 +16,10 @@ export async function findStudentByReg(id : string){
     })
     return student;
 }
+
+export async function findStudentByEmail(email : string){
+        const student = await prisma.students.findFirst({
+      where: { email },
+    });
+    return student;
+}
