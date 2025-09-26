@@ -25,16 +25,19 @@ const StudentForm: React.FC = () => {
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
 
+    // Registration Number validation
     if (!formData.regNo.trim()) {
       newErrors.regNo = "Registration number is required";
     } else if (formData.regNo.length < 9 || formData.regNo.length > 10) {
       newErrors.regNo = "Registration number must be 9-10 characters";
     }
 
+    // Name validation
     if (!formData.name.trim()) {
       newErrors.name = "Name is required";
     }
 
+    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!formData.email.trim()) {
       newErrors.email = "Email is required";
@@ -53,6 +56,7 @@ const StudentForm: React.FC = () => {
       [name]: name === "regNo" ? value.toUpperCase() : value, // 🔥 auto-uppercase regNo
     }));
 
+    // Clear error for this field when user starts typing
     if (errors[name as keyof FormErrors]) {
       setErrors((prev) => ({
         ...prev,
@@ -78,6 +82,7 @@ const StudentForm: React.FC = () => {
         type: "success",
       });
 
+      // Reset form
       setFormData({
         regNo: "",
         name: "",
@@ -100,12 +105,12 @@ const StudentForm: React.FC = () => {
       <div className="form-wrapper">
         <div className="form-header">
           <h1 className="form-title">
-            We <span className="highlight">Shot</span>
+            We<span className="highlight">Shot</span>
           </h1>
           <p className="form-subtitle">Enter your details and join us!</p>
 
           <div className="info-section">
-            <div className="info-toggle">ℹ️ About Our Goal</div>
+            <div className="info-toggle">ℹAbout Our Goal</div>
             <div className="info-content">
               <p>
                 Our mission is to keep you updated on{" "}
@@ -114,9 +119,8 @@ const StudentForm: React.FC = () => {
               </p>
               <p>
                 Please provide an email address that you{" "}
-                <strong>check regularly</strong> and that{" "}
-                <strong>does not receive too many emails daily</strong> so you
-                never miss our alerts.
+                <strong>check regularly</strong> and is{" "}
+                <strong>NeoPat registered</strong> so you never miss our alerts.
               </p>
             </div>
           </div>
@@ -147,6 +151,7 @@ const StudentForm: React.FC = () => {
               value={formData.regNo}
               onChange={handleInputChange}
               className={errors.regNo ? "error" : ""}
+              style={{ textTransform: "uppercase" }} // 🔥 makes it *look* uppercase in UI
               required
             />
             <label htmlFor="regNo" className={formData.regNo ? "active" : ""}>
