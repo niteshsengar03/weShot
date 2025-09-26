@@ -13,9 +13,12 @@
   "description": "",
   "dependencies": {
     "@prisma/client": "^6.16.2",
+    "bullmq": "^5.58.9",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
+    "ioredis": "^5.8.0",
+    "nodemailer": "^7.0.6",
     "prisma": "^6.16.2",
     "uuid": "^11.1.0",
     "winston": "^3.17.0",
@@ -26,6 +29,7 @@
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.1",
     "@types/node": "^22.14.1",
+    "@types/nodemailer": "^7.0.1",
     "nodemon": "^3.1.9",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
