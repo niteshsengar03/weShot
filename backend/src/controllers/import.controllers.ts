@@ -32,7 +32,7 @@ async function handleApiData(apiData: any) {
                 to: user.email,
                 subject: user.subject,
                 templateId: "hello",
-                params: { name: user.name, reg: user.reg },
+                params: { name: user.name, reg: user.reg,subject:user.subject},
             };
 
             return addEmailToQueue(payload);

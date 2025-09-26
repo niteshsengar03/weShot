@@ -23,8 +23,8 @@ export const setupMailerWorker = () => {
         payload.templateId,
         payload.params
       );
-
-      await sendEmail(payload.to, payload.subject, emailContent);
+      console.log(payload.params.name);
+      await sendEmail(payload.to, payload.subject,payload.params.name,emailContent);
     },
 
     // connection of redis instance
