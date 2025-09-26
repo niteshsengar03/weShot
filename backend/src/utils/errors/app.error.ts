@@ -1,17 +1,3 @@
-// write a object which extends error object which is given by js
-// to throw custom error class in js
-// interface AppError extends Error{
-//     statusCode: number;
-    // AppError(message:string,statusCode:number){
-    //     //super constructor is going to call error constructor
-    //     super(message);
-    //     this.statusCode=statusCode;
-    // }
-// }
-
-//interface helps you define types you can also object oriented things like extends
-
-
 export interface AppError extends Error {
     statusCode: number;
 }

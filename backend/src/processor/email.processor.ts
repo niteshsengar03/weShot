@@ -1,6 +1,6 @@
 import { Job, Worker } from "bullmq";
 import { MAILER_QUEUE } from "../queue/mailer.queue";
-import { notificationDto } from "../dto/notification.dto";
+import { notificationDto } from "../DTO/notification.dto";
 import { getRedisConnObject } from "../config/redis.config";
 import { MAILER_PAYLOAD } from "../producer/email.producer";
 import { BadRequestError } from "../utils/errors/app.error";
@@ -23,8 +23,8 @@ export const setupMailerWorker = () => {
         payload.templateId,
         payload.params
       );
-
-      await sendEmail(payload.to, payload.subject, emailContent);
+      console.log(payload.params.name);
+      await sendEmail(payload.to, payload.subject,payload.params.name,emailContent);
     },
 
     // connection of redis instance
