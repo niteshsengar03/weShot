@@ -110,7 +110,6 @@ const StudentForm: React.FC = () => {
           <p className="form-subtitle">Enter your details and join us!</p>
 
           <div className="info-section">
-            <div className="info-toggle">ℹAbout Our Goal</div>
             <div className="info-content">
               <p>
                 Our mission is to keep you updated on{" "}
