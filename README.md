@@ -1,10 +1,10 @@
-# WeShot - VIT Chennai Placement Notification System
+# WeShot - VIT Placement Notification System
 
 ![WeShot Banner](https://img.shields.io/badge/WeShot-VIT%20Chennai%20Placement%20System-blue?style=for-the-badge)
 
 ## 🎯 Project Overview
 
-**WeShot** is a comprehensive placement notification system specifically designed for VIT Chennai students. The system helps students stay updated about placement opportunities by collecting their registration details and automatically sending email notifications when they get shortlisted by companies.
+**WeShot** is a comprehensive placement notification system specifically designed for VIT students. The system helps students stay updated about placement opportunities by collecting their registration details and automatically sending email notifications when they get shortlisted by companies.
 
 ### 🏗️ System Architecture
 
@@ -31,23 +31,27 @@ The application follows a modern microservices architecture with clean separatio
 ## 🚀 Key Features
 
 ### 📝 Student Registration
+
 - **Web Interface**: Beautiful, responsive React frontend for student registration
 - **Form Validation**: Real-time validation with proper error handling
 - **Data Storage**: Secure storage of student details (Registration No., Name, Email)
 - **Duplicate Prevention**: Prevents duplicate registrations using unique registration numbers
 
 ### 🔄 Placement Data Processing
+
 - **N8N Integration**: RESTful API endpoint for external placement data ingestion
 - **Student Matching**: Intelligent matching of placement data with registered students
 - **Bulk Processing**: Handles multiple placement notifications simultaneously
 
 ### 📧 Automated Email Notifications
+
 - **Queue System**: Redis-powered BullMQ queue for reliable email processing
 - **Template Engine**: Handlebars-based email templates for professional notifications
 - **Background Processing**: Asynchronous email sending to ensure system responsiveness
 - **Error Handling**: Robust error handling with retry mechanisms
 
 ### 🛠️ Technical Excellence
+
 - **TypeScript**: Fully typed codebase for better development experience
 - **Input Validation**: Zod schema validation for API endpoints
 - **Logging**: Comprehensive logging with Winston for monitoring and debugging
@@ -97,6 +101,7 @@ weShot/
 ## 🔧 Technology Stack
 
 ### Backend
+
 - **Runtime**: Node.js with TypeScript
 - **Framework**: Express.js 5.x
 - **Database**: MySQL with Prisma ORM
@@ -107,6 +112,7 @@ weShot/
 - **Logging**: Winston
 
 ### Frontend
+
 - **Framework**: React 19 with TypeScript
 - **Build Tool**: Vite
 - **HTTP Client**: Axios
@@ -114,6 +120,7 @@ weShot/
 - **UI/UX**: Responsive design with gradient backgrounds
 
 ### Infrastructure
+
 - **Database**: MySQL
 - **Cache/Queue**: Redis
 - **Email Provider**: Gmail SMTP
@@ -121,6 +128,7 @@ weShot/
 ## 🚦 Getting Started
 
 ### Prerequisites
+
 - Node.js 18+ installed
 - MySQL database server
 - Redis server
@@ -129,12 +137,14 @@ weShot/
 ### Quick Setup
 
 1. **Clone the repository**
+
    ```bash
    git clone <repository-url>
    cd weShot
    ```
 
 2. **Backend Setup**
+
    ```bash
    cd backend
    npm install
@@ -143,6 +153,7 @@ weShot/
    ```
 
 3. **Frontend Setup**
+
    ```bash
    cd reactFrontend
    npm install
@@ -163,16 +174,19 @@ For detailed setup instructions, API documentation, and configuration guides:
 ## 🎯 Use Cases
 
 ### For Students
+
 1. **Registration**: Students register once with their VIT registration number, name, and email
 2. **Notifications**: Receive automatic email alerts when shortlisted for placement opportunities
 3. **Updates**: Stay informed about placement processes without manual checking
 
 ### For Placement Coordinators
+
 1. **Data Integration**: Import placement data from external sources via API
 2. **Bulk Notifications**: Send notifications to multiple students simultaneously
 3. **Tracking**: Monitor email delivery and system performance
 
 ### For Developers/System Integrators
+
 1. **API Integration**: Easy REST API integration for external systems
 2. **Scalable Architecture**: Queue-based system handles high volume efficiently
 3. **Monitoring**: Comprehensive logging for system monitoring and debugging
@@ -180,6 +194,7 @@ For detailed setup instructions, API documentation, and configuration guides:
 ## 🤝 Contributing
 
 This project is designed to be maintainable and extensible. Key areas for contribution:
+
 - Additional email templates
 - Enhanced notification features
 - Performance optimizations
@@ -191,4 +206,4 @@ ISC License - Feel free to use this project for educational and commercial purpo
 
 ---
 
-**Built with ❤️  for VIT Chennai Students**
+**Built with ❤️ by Nitesh,Aditya,Akshat Bijlwan and Abhyuday**
