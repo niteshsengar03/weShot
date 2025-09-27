@@ -6,7 +6,6 @@ export type studentDTO = {
 
 export type dataStudentDTO = {
     reg?: string; 
-    name: string; 
     email?: string; 
     subject: string
 }
