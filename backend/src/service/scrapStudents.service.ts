@@ -15,9 +15,10 @@ export async function scrapedStudents(
   const result: ScrapedStudent[] = [];
 
   for (const student of students) {
-    if (student.reg) {
+    if (student.regNo) {
+      const formatedRegNo = formatRegNo(student.regNo);
       //regNo provided
-      const existingStudent = await findStudentByReg(student.reg);
+      const existingStudent = await findStudentByReg(formatedRegNo);
       if (existingStudent) {
         result.push({
           reg: existingStudent.regNo,
@@ -42,4 +43,8 @@ export async function scrapedStudents(
   }
 
   return result;
+}
+
+function formatRegNo(regNo:string) {
+  return regNo.slice(0, 5).toUpperCase() + regNo.slice(5);
 }

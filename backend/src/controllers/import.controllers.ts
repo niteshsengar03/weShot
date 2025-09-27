@@ -1,13 +1,14 @@
 import { Request, Response } from "express";
 import { scrapedStudents } from "../service/scrapStudents.service";
 import { addEmailToQueue } from "../producer/email.producer";
+import { BadRequestError } from "../utils/errors/app.error";
 
 export async function importStudent(req:Request,res:Response){
     const result = await scrapedStudents(req.body);
     
     await handleApiData(result);
     res.status(200).json({
-        result
+        message :"success"
     }) 
 }
 
@@ -15,10 +16,8 @@ export async function importStudent(req:Request,res:Response){
 
 async function handleApiData(apiData: any) {
     const result = Array.isArray(apiData) ? apiData : apiData?.result;
-
     if (!Array.isArray(result) || result.length === 0) {
-        console.warn("No data to process for email queue");
-        return;
+        throw new BadRequestError("No data to process for email queue");
     }
 
     await Promise.all(
