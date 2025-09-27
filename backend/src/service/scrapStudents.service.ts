@@ -17,6 +17,7 @@ export async function scrapedStudents(
   for (const student of students) {
     if (student.regNo) {
       const formatedRegNo = formatRegNo(student.regNo);
+      // console.log(formatedRegNo)
       //regNo provided
       const existingStudent = await findStudentByReg(formatedRegNo);
       if (existingStudent) {

@@ -5,7 +5,6 @@ import { BadRequestError } from "../utils/errors/app.error";
 
 export async function importStudent(req:Request,res:Response){
     const result = await scrapedStudents(req.body);
-    
     await handleApiData(result);
     res.status(200).json({
         message :"success"
@@ -15,7 +14,8 @@ export async function importStudent(req:Request,res:Response){
 
 
 async function handleApiData(apiData: any) {
-    const result = Array.isArray(apiData) ? apiData : apiData?.result;
+    // const result = Array.isArray(apiData) ? apiData : apiData?.result;
+    const result = apiData;
     if (!Array.isArray(result) || result.length === 0) {
         throw new BadRequestError("No data to process for email queue");
     }

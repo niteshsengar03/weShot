@@ -17,6 +17,7 @@ export async function findStudentByReg(id : string){
     return student;
 }
 
+// using findfirst because it is eamil is neither unique nor primary in db
 export async function findStudentByEmail(email : string){
         const student = await prisma.students.findFirst({
       where: { email },
