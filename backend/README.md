@@ -11,6 +11,7 @@ The WeShot backend is a robust Express.js API server built with TypeScript that 
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js 18+
 - MySQL 8.0+
 - Redis 6.0+
@@ -57,6 +58,7 @@ MAIL_PASSWORD=your-gmail-app-password
 ## 📋 API Endpoints
 
 ### Student Registration
+
 ```http
 POST /api/v1/student/create-student
 Content-Type: application/json
@@ -69,6 +71,7 @@ Content-Type: application/json
 ```
 
 ### Placement Notifications
+
 ```http
 POST /api/v1/student/n8n
 Content-Type: application/json
@@ -133,6 +136,7 @@ tail -f logs/application-*.log
 ## 🐛 Troubleshooting
 
 **Database Connection Issues:**
+
 ```bash
 # Test MySQL connection
 mysql -u username -p -e "SHOW DATABASES;"
@@ -140,12 +144,14 @@ npx prisma db pull
 ```
 
 **Redis Connection Issues:**
+
 ```bash
 # Test Redis connection
 redis-cli ping
 ```
 
 **Email Issues:**
+
 - Verify Gmail app password
 - Check 2FA is enabled
 - Ensure correct SMTP settings
