@@ -1,6 +1,6 @@
 # WeShot - VIT Placement Notification System
 
-![WeShot Banner](https://img.shields.io/badge/WeShot-VIT%20Chennai%20Placement%20System-blue?style=for-the-badge)
+![WeShot Banner](https://img.shields.io/badge/WeShot-VIT%20Placement%20System-blue?style=for-the-badge)
 
 ## 🎯 Project Overview
 
