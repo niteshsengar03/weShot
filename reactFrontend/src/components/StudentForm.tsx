@@ -53,7 +53,7 @@ const StudentForm: React.FC = () => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [name]: name === "regNo" ? value.toUpperCase() : value, // 🔥 auto-uppercase regNo
+      [name]: name === "regNo" ? value.toUpperCase() : value,
     }));
 
     // Clear error for this field when user starts typing
@@ -78,7 +78,7 @@ const StudentForm: React.FC = () => {
     try {
       const response = await studentAPI.createStudent(formData);
       setMessage({
-        text: `✅ Successfully registered! Welcome, ${response.message.name}!`,
+        text: `Successfully registered! Welcome, ${response.message.name}!`,
         type: "success",
       });
 
@@ -90,7 +90,7 @@ const StudentForm: React.FC = () => {
       });
     } catch (error) {
       setMessage({
-        text: `❌ ${
+        text: `${
           error instanceof Error ? error.message : "Registration failed"
         }`,
         type: "error",
@@ -151,7 +151,7 @@ const StudentForm: React.FC = () => {
               value={formData.regNo}
               onChange={handleInputChange}
               className={errors.regNo ? "error" : ""}
-              style={{ textTransform: "uppercase" }} // 🔥 makes it *look* uppercase in UI
+              style={{ textTransform: "uppercase" }}
               required
             />
             <label htmlFor="regNo" className={formData.regNo ? "active" : ""}>
